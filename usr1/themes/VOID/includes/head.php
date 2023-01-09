@@ -51,15 +51,17 @@ if (isset($_POST['void_action'])) {
     <meta name="twitter:title" content="<?php Contents::title($this); ?>" />
     <meta name="twitter:description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@<?php echo $setting['twitterId']; ?>" />
+    <meta name="twitter:creator" content="@<?php echo $setting['twitterId']; ?>" />
     <meta name="twitter:image" content="<?php echo $banner; ?>" />
     <?php $this->header('commentReply=&description=&'); ?>
 
     <!--CSS-->
     <link rel="stylesheet" href="<?php Utils::indexTheme('/assets/bundle-1e9bf597b1.css');?>">
-    <link rel="stylesheet" href="<?php Utils::indexTheme('/assets/VOID-85f5618f4c.css');?>">
+    <link rel="stylesheet" href="<?php Utils::indexTheme('/assets/VOID-505617232e.css');?>">
 
     <!--JS-->
-    <script src="<?php Utils::indexTheme('/assets/bundle-header-25184848f0.js'); ?>"></script>
+    <script src="<?php Utils::indexTheme('/assets/bundle-header-c3f7d82f38.js'); ?>"></script>
     <script>
     VOIDConfig = {
         PJAX : <?php echo $setting['pjax'] ? 'true' : 'false'; ?>,
@@ -71,6 +73,7 @@ if (isset($_POST['void_action'])) {
         colorScheme:  <?php echo $setting['colorScheme']; ?>,
         headerMode: <?php echo $setting['headerMode']; ?>,
         followSystemColorScheme: <?php echo $setting['followSystemColorScheme'] ? 'true' : 'false'; ?>,
+        browserLevelLoadingLazy: <?php echo $setting['browserLevelLoadingLazy'] ? 'true' : 'false'; ?>,
         VOIDPlugin: <?php echo $setting['VOIDPlugin'] ? 'true' : 'false'; ?>,
         votePath: "<?php Utils::index('/action/void?'); ?>",
         lightBg: "",
@@ -87,7 +90,7 @@ if (isset($_POST['void_action'])) {
         isDev: true
     }
     </script>
-    <script src="<?php Utils::indexTheme('/assets/header-dba1d6f214.js'); ?>"></script>
+    <script src="<?php Utils::indexTheme('/assets/header-fd3209d155.js'); ?>"></script>
     
     <?php echo $setting['head']; ?>
     <style>

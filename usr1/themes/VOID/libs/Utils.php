@@ -138,11 +138,11 @@ class Utils
     public static function addButton()
     {
         echo '<script src="';
-        self::indexTheme('/assets/libs/owo/owo_02.js');
+        self::indexTheme('/assets/libs/owo/owo_03.js');
         echo '"></script>';
 
         echo '<script src="';
-        self::indexTheme('/assets/editor-d6bdd77f4b.js');
+        self::indexTheme('/assets/editor-40479fd536.js');
         echo '"></script>';
 
         echo '<link rel="stylesheet" href="';
@@ -336,6 +336,7 @@ class Utils
             'commentFoldThreshold' => array(5, 1.5),
             'commentNotification' => '',
             'bluredLazyload' => false,
+            'browserLevelLoadingLazy' => false,
             'CDNType' => array()
         );
 
